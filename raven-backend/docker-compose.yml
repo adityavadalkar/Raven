@@ -1,0 +1,20 @@
+version: "2"
+services:
+  raven-api:
+    build: .
+    environment:
+      - MONGO_PASSWORD=IDv7GUPycwVb5MQM
+      - MONGO_USERNAME=raven_dev
+      - MONGO_CLUSTER=cluster0.k14ds6b
+      - MONGO_DBNAME=clothing
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"

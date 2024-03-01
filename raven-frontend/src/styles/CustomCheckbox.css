@@ -1,0 +1,19 @@
+.custom-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 5px;
+    padding: 5px; */
+    gap: 5px;
+    background-color: var(--bs-gray-200);
+}
+
+.custom-checkbox input[type="checkbox"] {
+    border-radius: 0px;
+    border-color: black;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+    background-color: black;
+}

@@ -1,0 +1,30 @@
+language: node_js
+
+cache:
+  directories:
+    - ~/.npm
+
+node_js:
+  - "8"
+  - "10"
+  - "12"
+
+services:
+  - mongodb
+
+git:
+  depth: 3
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - NODE_ENV=test
+    - PORT=8080
+    - MONGO_URI=mongodb+srv://worenu_dev:rNa90tcCXWSeBLOU@cluster0.k14ds6b.mongodb.net/clothing?retryWrites=true&w=majority
+    - MONGO_URI_TESTS=mongodb+srv://worenu_dev:rNa90tcCXWSeBLOU@cluster0.k14ds6b.mongodb.net/clothing?retryWrites=true&w=majority
+
+script: yarn validate
+after_success: yarn coverage

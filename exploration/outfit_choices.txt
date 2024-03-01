@@ -1,0 +1,24 @@
+outfit 1 is designed for Beach party, Summer barbecue, Vacation, Day at the beach, Casual summer gathering, Pool party, Music festival, Weekend outing, Picnic, Cruise. 
+It contains {Top: A crisp white button-up shirt with a navy blue v-neck sweater layered over it.
+Bottom: Khaki chinos or trousers.
+Shoes: Brown leather loafers.
+Accessories: A striped or solid-colored silk tie, a leather belt, and a classic wristwatch.}
+
+outfit 2 is designed for Casual gathering, Concert, Sport event, Weekend outing, Casual shopping, City exploration, Skate park, Music festival, Road trip, Streetwear event.
+It contains {
+Top: Bomber jacket or a varsity jacket.
+Layering: Plain or striped t-shirt.
+Bottom: Baggy jeans or cargo pants.
+Footwear: High-top sneakers or boots.
+Accessories: Baseball cap worn backward, a chain necklace, and a beanie.
+}
+
+outift 30 is designed for Gym, Casual Friday at work, Casual shopping, Sport event, Weekend outing, Road trip, Casual gathering, Walking the dog, Music festival, City exploration. 
+It contains {Sports Luxe: Blending sportswear and luxury elements, sports luxe style combines athletic-inspired clothing like joggers, hoodies, and sneakers with high-end fabrics, tailored cuts, and refined details.}
+
+outfit 31 is designed for Business meetings, Office wear, Semi-formal parties, Professional networking events, Dinners, Weddings, Church, Conferences, Art galleries, Museums. 
+It contains {• navy or gray unstructured blazer
+• blk or navy & white polo or tee
+• dk wash or raw indigo denim jeans
+• black belt
+• black, white, or gray casual boot/shoes/dress sneakers}

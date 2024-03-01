@@ -1,0 +1,864 @@
+:root {
+  --accordion-icon-plus: url('../../public/icons/plus.svg');
+  --accordion-icon-minus: url('../../public/icons/minus.svg');
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+.font-sm {
+  font-size: 0.75rem;
+}
+
+.font-regular {
+  font-size: 1rem;
+}
+
+.font-large {
+  font-size: 1.5rem;
+}
+
+.modal {
+  --bs-modal-border-radius: 0px;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .modal.show {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+p, a, label, li, figcaption, ol, blockquote, button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.toast {
+  --bs-toast-bg: #fff;
+}
+
+.toast-header {
+  color: black
+}
+
+.toast-body {
+  padding: 2rem;
+}
+
+.tutorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as desired */
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.tutorial-toast {
+  position: absolute;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.tutorial-toast.show {
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+label {
+  font-size: 0.75rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.form-check-label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  padding-left: 25px;
+  line-height: 20px;
+}
+
+.form-check-label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.form-check-label.black:before {
+  background-color: #000000;
+}
+.form-check-label.blue:before {
+  background-color: #0000ff;
+}
+.form-check-label.brown:before {
+  background-color: #a52a2a;
+}
+.form-check-label.charcoal:before {
+  background-color: #36454f;
+}
+.form-check-label.dark-blue:before {
+  background-color: #00008b;
+}
+.form-check-label.gray:before,
+.form-check-label.grey:before {
+  background-color: #808080;
+}
+.form-check-label.green:before {
+  background-color: #008000;
+}
+.form-check-label.navy:before {
+  background-color: #000080;
+}
+.form-check-label.purple:before {
+  background-color: #800080;
+}
+.form-check-label.red:before {
+  background-color: #ff0000;
+}
+.form-check-label.white:before {
+  background-color: #ffffff;
+}
+.form-check-label.yellow:before {
+  background-color: #ffff00;
+}
+
+#back-btn {
+  width: 15%;
+}
+
+@media (max-width: 768px) {
+  #back-btn {
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  #back-btn {
+    width: 50%;
+  }
+}
+
+.survey.modal {
+  --bs-modal-width: 80vw;
+}
+
+.suggestions {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions li {
+  color: #000;
+  background-color: #fff;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+
+.suggestions li:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+
+/* Login and signup */
+/* For screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .login-form-container {
+    height: auto;
+    padding: 20px;
+  }
+  .login-form {
+    width: 100%;
+  }
+}
+
+/* For screens larger than 768px */
+@media screen and (min-width: 768px) {
+  .login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .login-form {
+    width: 30vw;
+    padding: 20px;
+  }
+}
+
+.login-form h1 {
+  margin-top: 0;
+}
+
+.login-form .form-group {
+  margin-bottom: 10px;
+}
+
+.validation {
+  color: red;
+  display: block;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input[type='email'],
+.login-form input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+/* Use the label class to add the color swatch to the label element */
+.label-color {
+  display: inline-block;
+}
+
+/* Instruction modal styles */
+ul.instructions {
+  
+}
+
+ul.instructions li {
+  background-color: #f2f2f2; /* set background color for the <ul> element */
+  padding: 20px; /* add some padding to the <ul> element */
+  list-style: none;
+  margin-bottom: 30px; /* add space between <li> elements */
+  border-radius: 10px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #D2D2D2;
+  position: relative;
+}
+
+/* Media query for mobile devices (adjust the max-width as needed) */
+/* @media (max-width: 578px) {
+  .sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #D2D2D2;
+    z-index: 10000; 
+  }
+} */
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.dropdown-menu{
+  --bs-dropdown-font-size: 0.75rem;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+#dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown-content p:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Home Page Styles */
+
+.flip-card {
+  width: 100%;
+  height: 60vh; /* Default height */
+}
+@media (min-width: 0px) {
+  .flip-card {
+    width: 45vw;
+    height: 45vh; /* Three cards in one row on smaller screens */
+    aspect-ratio: 2/3;
+  }
+}
+
+@media (min-width: 378px) {
+  .flip-card {
+    width: 45vw;
+    height: 45vh; /* Three cards in one row on smaller screens */
+    aspect-ratio: 2/3;
+  }
+}
+
+@media (min-width: 576px) {
+  .flip-card {
+    width: 40vw; /* Three cards in one row on smaller screens */
+    height: 45vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .flip-card {
+    width: 20vw; /* Three cards in one row on larger screens */
+    height: 30vw;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  /* border-radius: 10px; */
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .flip-card-button {
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  width:80%;
+} */
+
+.flip-card-button:focus:before {
+  opacity: 0.3;
+}
+
+/* Card styles */
+
+.card-body-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.card {
+  border-radius: 0%;
+  transition: all 1ms;
+}
+
+.card-row {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Scroll through styles on generate outfits page */
+.scroll {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  width: 200px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #D2D2D2;
+}
+::-webkit-scrollbar-thumb {
+  background: #3556B6;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #D2D2D2;
+}
+
+.scroll:hover {
+  overflow-y: auto;
+  transition: 500ms ease-in-out;
+}
+
+.scroll > img {
+  width: 200px;
+}
+
+/* Item Card styles */
+
+.card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-card-img {
+  aspect-ratio: 2/3;
+  object-fit: contain;
+  height: 40vh;
+}
+
+@media screen and (max-width: 767px) {
+  .item-card-img {
+    height: 30vh;
+  }
+} 
+
+.likes {
+  background-color: var(--neutral-99, #F2F2F2);
+}
+
+.likes:hover {
+  filter: drop-shadow(0px 0px 20px black);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btns.btn-large {
+    font-size: 0.75rem;
+  }
+
+  p{
+    font-size: 0.75rem;
+  }
+}
+
+.btns.transparent-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.btns.white-btn {
+  color: black;
+  background-color: transparent;
+  border: 0.5px solid var(--neutral-80, #D2D2D2);
+}
+
+.btns.white-btn:hover {
+  transition: 0.15s ease-in-out;
+  background-color: black;
+  color: white;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 0px;
+  padding: 1rem;
+}
+
+
+
+.btns.btn-large {
+  font-size: 1rem;
+}
+
+.btn-small {
+  font-size: 0.75rem;
+}
+
+.btns.black-btn {
+  color: white;
+  background-color: black;
+}
+
+.btns.black-btn a:hover {
+  color: black;
+}
+
+.btns.black-btn:hover {
+  transition: 0.15s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+/* Related items styles */
+
+.related-item.img {
+  height: 900px;
+}
+
+
+/* Outfits page */
+.price-filter > .dropdown-menu {
+  width: 30vw;
+}
+
+@media (max-width: 767px) {
+  .price-filter > .dropdown-menu {
+    width: 75vw;
+  }
+}
+
+.style-image {
+  height: 30vh;
+  width: 30vw;
+}
+
+@media (min-width: 576px) {
+  .style-image {
+    width: 10vw; /* Three cards in one row on smaller screens */
+    height: 20vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .style-image {
+    width: 20vw; /* Three cards in one row on larger screens */
+    height: 30vh;
+  }
+}
+
+@media (min-width: 992px) {
+  /* set new width and height for large devices */
+  .style-image {
+    width: 30vw;
+    height: 80vh;
+  }
+}
+
+/* Outfit settings style */
+
+.accordion-button::after {
+  background-image: var(--accordion-icon-plus);
+  background-size: 0.625rem;
+  background-position: center;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--accordion-icon-minus);
+  background-size: 0.625rem;
+  background-position: center;
+}
+
+.outfit-settings.modal {
+  --bs-modal-width: 90vw;
+  height: 100vh;
+}
+
+.find-similar.offcanvas {
+  --bs-offcanvas-height: 95vh;
+}
+
+.filters{
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 55vh;
+}
+
+.filters .accordion-item{
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+hr {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.related-images {
+  max-height: 60vh;
+  overflow-y: auto; /* add scrollbar only when necessary */
+  overflow-x: hidden;
+  gap: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  /* set new width and height for large devices */
+  .related-images {
+    max-height: 100vh;
+  }
+}
+
+.mobile-filter-backdrop {
+  z-index: 1050;
+}
+
+
+/* Survey Form */
+
+/* Lists page */
+.add-item{
+  border: 1px dashed grey;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 57vh;
+  margin-bottom: 2rem;
+}
+
+.add-item .col {
+  height: 60vh;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 20vh;
+  object-fit: contain;
+}
+
+/* Add a dashed border to the empty card */
+
+/* List Item */
+.list-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 0%;
+}
+
+.lists-imgs {
+  height: auto;
+  min-height: 40vh;
+}
+
+.options:hover {
+  cursor: pointer;
+  color: #ccc;
+}
+
+/* User Profile */
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+/* Targeting the class name */
+.list-group-item {
+  background-color: var(--bs-gray-200);
+  margin-bottom: 10px;
+}
+
+/* Using a descendant selector */
+.list-group .list-group-item {
+  border: none;
+  padding: 10px;
+}
+
+.list-page-card {
+  position: relative;
+}
+
+.cross-icon {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  top: 30px; /* Adjust the desired top position */
+  left: 30px;
+  font-size: 2rem;
+  z-index: 999;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.profile .nav-item .nav-link.active {
+  border: none;
+  border-bottom: 2px solid var(--bs-blue);
+  background-color: transparent;
+}
+
+.profile .nav-link {
+  color: black
+}
+
+
+/* Customize the appearance of the range slider */
+.form-range {
+  width: 100%;
+  height: 1.5rem;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -0.5rem;
+}
+
+.form-range::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* user survey */
+.survey-item {
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 50vh;
+  height: auto;
+  overflow-y: auto;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 0;
+  max-height: 30px;
+  z-index: -1;
+}
+
+/* .carousel-dark .carousel-indicators [data-bs-target] {
+  
+} */
+
+.carousel-indicators [data-bs-target]{
+  opacity: 0.1;
+  background-color: var(--bs-blue);
+  width: 80px;
+}
+
+.carousel-indicators .active{
+  opacity: 1;
+}
+
+/* .form-check {
+  display: 'flex';
+  margin-top: '10px';
+  flex-direction: 'column';
+} */
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color: var(--bs-secondary);
+}
+
+/* Add list modal */
+.add-list-items{
+  min-height:7vh;
+}
